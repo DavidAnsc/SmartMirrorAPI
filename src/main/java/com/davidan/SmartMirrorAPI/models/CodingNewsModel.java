@@ -42,7 +42,7 @@ public class CodingNewsModel {
     private void obtainHeadlines() {
         Element[] headlines = headlinesScraper.getElementsByTag(QUERY);
         for (int i = 0; i < 10; i++) {
-            this.headlineLinks[i] = "https://news.ycombinator.com/" + headlines[i].select("a").attr("href");
+            this.headlineLinks[i] = headlines[i].select("a").attr("href");
             this.headlines[i] = headlines[i].text();
         }
     }

@@ -15,6 +15,22 @@ public class APIData {
         codingNewsModel = new CodingNewsModel();
     }
 
+
+    public TimeModel getTimeModel() {
+        return timeModel;
+    }
+    public WeatherDataModel getWeatherDataModel() {
+        return weatherDataModel;
+    }
+    public MathQuestionsModel getMathQuestionsModel() {
+        return mathQuestionsModel;
+    }
+    public CodingNewsModel getCodingNewsModel() {
+        return codingNewsModel;
+    }
+
+
+
     public void obtainAllData() throws Exception {
         timeModel.obtainData();
         weatherDataModel.obtainData();
