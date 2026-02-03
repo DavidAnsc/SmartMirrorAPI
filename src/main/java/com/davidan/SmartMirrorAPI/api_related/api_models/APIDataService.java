@@ -1,4 +1,4 @@
-package com.davidan.SmartMirrorAPI.api_models;
+package com.davidan.SmartMirrorAPI.api_related.api_models;
 
 import org.springframework.stereotype.Service;
 

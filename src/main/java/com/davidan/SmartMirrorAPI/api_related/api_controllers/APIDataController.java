@@ -1,10 +1,10 @@
-package com.davidan.SmartMirrorAPI.api_controllers;
+package com.davidan.SmartMirrorAPI.api_related.api_controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.davidan.SmartMirrorAPI.api_models.APIData;
-import com.davidan.SmartMirrorAPI.api_models.APIDataService;
+import com.davidan.SmartMirrorAPI.api_related.api_models.APIData;
+import com.davidan.SmartMirrorAPI.api_related.api_models.APIDataService;
 
 @RestController
 public class APIDataController {

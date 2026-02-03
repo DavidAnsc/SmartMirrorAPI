@@ -1,0 +1,86 @@
+{
+  "codingNewsModel": {
+    "headlineLinks": [
+      "https://notepad-plus-plus.org/news/hijacked-incident-info-update/",
+      "https://lapcatsoftware.com/articles/2026/2/1.html",
+      "https://journal.rafaelcosta.me/my-thousand-dollar-iphone-cant-do-math/",
+      "https://xikipedia.org",
+      "https://www.bbc.com/news/articles/c93v21q5xdvo",
+      "https://martinalderson.com/posts/two-kinds-of-ai-users-are-emerging/",
+      "https://apps.dtic.mil/sti/tr/pdf/ADA157917.pdf",
+      "https://www.theverge.com/tech/865689/microsoft-claude-code-anthropic-partnership-notepad",
+      "https://neutree.ai/blog/nano-vllm-part-1",
+      "https://blog.bawolf.com/p/founding-is-a-snowball"
+    ],
+    "headlines": [
+      "Notepad++ hijacked by state-sponsored actors (notepad-plus-plus.org)",
+      "Apple's MacBook Pro DFU port documentation is wrong (lapcatsoftware.com)",
+      "My iPhone 16 Pro Max produces garbage output when running MLX LLMs (rafaelcosta.me)",
+      "Show HN: Wikipedia as a doomscrollable social media feed (xikipedia.org)",
+      "Treasures found on HS2 route (bbc.com)",
+      "Two kinds of AI users are emerging (martinalderson.com)",
+      "Actors: A Model of Concurrent Computation [pdf] (1985) (dtic.mil)",
+      "Claude Code is suddenly everywhere inside Microsoft (theverge.com)",
+      "Nano-vLLM: How a vLLM-style inference engine works (neutree.ai)",
+      "Founding is a snowball (bawolf.com)"
+    ],
+    "questionLinks": [
+      "https://news.ycombinator.com/item?id=46857488",
+      "https://news.ycombinator.com/item?id=46857487",
+      "https://news.ycombinator.com/item?id=46864047",
+      "https://news.ycombinator.com/item?id=46857444",
+      "https://news.ycombinator.com/item?id=46860544",
+      "https://news.ycombinator.com/item?id=46863378",
+      "https://news.ycombinator.com/item?id=46861542",
+      "https://news.ycombinator.com/item?id=46860945",
+      "https://news.ycombinator.com/item?id=46853873",
+      "https://news.ycombinator.com/item?id=46839375"
+    ],
+    "questions": [
+      "Ask HN: Who is hiring? (February 2026)",
+      "Ask HN: Who wants to be hired? (February 2026)",
+      "Ask HN: What weird or scrappy things did you do to get your first users?",
+      "Kernighan on Programming",
+      "GitHub Actions Have \"Major Outage\"",
+      "Ask HN: Who is firing? (February 2026)",
+      "Ask HN: How do you give AI agents access without over-permissioning?",
+      "GitHub Incidents with Actions and Codespaces",
+      "Ask HN: Has anybody moved their local community off of Facebook groups?",
+      "Google Cloud suspended my account for 2 years, only automated replies"
+    ]
+  },
+  "mathQuestionsModel": {
+    "answers": [
+      "76379 is a  prime",
+      "76379 is NOT a perfect number",
+      "76379 is NOT a Mersenne prime",
+      "76379 is NOT a Fermat prime",
+      "76379 is NOT a Fibonacci prime",
+      "76379 is NOT a Partition prime",
+      "76379 is NOT a Pell prime"
+    ],
+    "questions": [
+      "Is 76379 a Prime Number?",
+      "Is 76379 a perfect number?",
+      "Is 76379 a Mersenne Prime?",
+      "Is 76379 a Fermat Prime?",
+      "Is 76379 a Fibonacci Prime?",
+      "Is 76379 a Partition Prime?",
+      "Is 76379 a Pell Prime?"
+    ]
+  },
+  "timeModel": {
+    "date": "February 2nd 2026",
+    "daysLeft": "332",
+    "time": "7:36 PM",
+    "weekday": "Monday"
+  },
+  "weatherDataModel": {
+    "actTemp": -7.55,
+    "description": "light snow",
+    "feelsLike": -12.67,
+    "humidity": 88,
+    "minMaxTemp": [-21.07, -6.26],
+    "precipitation": null
+  }
+}

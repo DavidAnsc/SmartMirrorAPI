@@ -1,4 +1,4 @@
-package com.davidan.SmartMirrorAPI.api_models;
+package com.davidan.SmartMirrorAPI.api_related.api_models;
 
 import com.davidan.SmartMirrorAPI.models.*;
 
