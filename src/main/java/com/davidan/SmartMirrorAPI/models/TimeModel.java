@@ -58,43 +58,43 @@ public class TimeModel {
         }
         switch (month) {
             case 1:
-                modifiedMonth = "January";
+                modifiedMonth = "Jan";
                 break;
             case 2:
-                modifiedMonth = "February";
+                modifiedMonth = "Feb";
                 break;
             case 3:
-                modifiedMonth = "March";
+                modifiedMonth = "Mar";
                 break;
             case 4:
-                modifiedMonth = "April";
+                modifiedMonth = "Apr";
                 break;
             case 5:
                 modifiedMonth = "May";
                 break;
             case 6:
-                modifiedMonth = "June";
+                modifiedMonth = "Jun";
                 break;
             case 7:
-                modifiedMonth = "July";
+                modifiedMonth = "Jul";
                 break;
             case 8:
-                modifiedMonth = "August";
+                modifiedMonth = "Aug";
                 break;
             case 9:
-                modifiedMonth = "September";
+                modifiedMonth = "Sep";
                 break;
             case 10:
-                modifiedMonth = "October";
+                modifiedMonth = "Oct";
                 break;
             case 11:
-                modifiedMonth = "November";
+                modifiedMonth = "Nov";
                 break;
             case 12:
-                modifiedMonth = "December";
+                modifiedMonth = "Dec";
                 break;
         }
-        this.date = modifiedMonth + " " + modifiedDay + " " + this.date.substring(0, 4);
+        this.date = modifiedMonth + " " + modifiedDay;
     }
     public TimeModel() throws Exception {
         formatTime();
@@ -122,25 +122,25 @@ public class TimeModel {
         this.daysLeft = String.valueOf(365 - dayOfTheYear);
         switch (dayOfTheWeek) {
             case 1:
-                this.weekday = "Monday";
+                this.weekday = "Mon";
                 break;
             case 2:
-                this.weekday = "Tuesday";
+                this.weekday = "Tue";
                 break;
             case 3:
-                this.weekday = "Wednesday";
+                this.weekday = "Wed";
                 break;
             case 4:
-                this.weekday = "Thursday";
+                this.weekday = "Thu";
                 break;
             case 5:
-                this.weekday = "Friday";
+                this.weekday = "Fri";
                 break;
             case 6:
-                this.weekday = "Saturday";
+                this.weekday = "Sat";
                 break;
             case 0:
-                this.weekday = "Sunday";
+                this.weekday = "Sun";
                 break;
         }
 

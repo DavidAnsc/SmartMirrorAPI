@@ -4,14 +4,15 @@ import com.davidan.SmartMirrorAPI.models.*;
 
 public class APIData {
     TimeModel timeModel;
+    ZenQuotesModel zenQuotesModel;
     WeatherDataModel weatherDataModel;
     MathQuestionsModel mathQuestionsModel;
     CodingNewsModel codingNewsModel;
 
     public APIData() throws Exception {
         timeModel = new TimeModel();
+        zenQuotesModel = new ZenQuotesModel();
         weatherDataModel = new WeatherDataModel();
-        mathQuestionsModel = new MathQuestionsModel();
         codingNewsModel = new CodingNewsModel();
     }
 
@@ -22,8 +23,8 @@ public class APIData {
     public WeatherDataModel getWeatherDataModel() {
         return weatherDataModel;
     }
-    public MathQuestionsModel getMathQuestionsModel() {
-        return mathQuestionsModel;
+    public ZenQuotesModel getZenQuotesModel() {
+        return zenQuotesModel;
     }
     public CodingNewsModel getCodingNewsModel() {
         return codingNewsModel;
@@ -34,7 +35,7 @@ public class APIData {
     public void obtainAllData() throws Exception {
         timeModel.obtainData();
         weatherDataModel.obtainData();
-        mathQuestionsModel.obtainData();
+        zenQuotesModel.obtainData();
         codingNewsModel.obtainData();
     }
 }
