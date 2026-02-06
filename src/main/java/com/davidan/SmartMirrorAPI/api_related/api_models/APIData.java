@@ -8,12 +8,14 @@ public class APIData {
     WeatherDataModel weatherDataModel;
     MathQuestionsModel mathQuestionsModel;
     CodingNewsModel codingNewsModel;
+    CalendarEventsModel calendarEventsModel;
 
     public APIData() throws Exception {
         timeModel = new TimeModel();
         zenQuotesModel = new ZenQuotesModel();
         weatherDataModel = new WeatherDataModel();
         codingNewsModel = new CodingNewsModel();
+        calendarEventsModel = new CalendarEventsModel();
     }
 
 
@@ -29,6 +31,9 @@ public class APIData {
     public CodingNewsModel getCodingNewsModel() {
         return codingNewsModel;
     }
+    public CalendarEventsModel getCalendarEventsModel() {
+        return calendarEventsModel;
+    }
 
 
 
@@ -37,5 +42,14 @@ public class APIData {
         weatherDataModel.obtainData();
         zenQuotesModel.obtainData();
         codingNewsModel.obtainData();
+        calendarEventsModel.obtainData();
+    }
+
+    public void fetchAllData() throws Exception {
+        timeModel.obtainData();
+        weatherDataModel.obtainData();
+        zenQuotesModel.obtainData();
+        codingNewsModel.obtainData();
+        calendarEventsModel.fetchData();
     }
 }

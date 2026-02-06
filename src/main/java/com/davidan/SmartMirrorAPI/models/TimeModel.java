@@ -11,10 +11,10 @@ import com.davidan.SmartMirrorAPI.kits.XMLHandlerKit;
 public class TimeModel {
     /**/DateTimeFormatter TIMEFORMATTER = DateTimeFormatter.ofPattern("HH:mm");
     /**/DateTimeFormatter DATEFORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-    /**/private LocalDateTime TIME = LocalDateTime.now();
+    /**/private LocalDateTime TIME;
     /**/private String APIURL = "http://worldtimeapi.org/api/timezone/America/Toronto";
-    private String time = TIME.format(TIMEFORMATTER);
-    private String date = TIME.format(DATEFORMATTER);
+    private String time;
+    private String date;
     private String weekday;
     private String daysLeft; // of the year
     /**/private JSONObject jsonObj;
@@ -97,6 +97,9 @@ public class TimeModel {
         this.date = modifiedMonth + " " + modifiedDay;
     }
     public TimeModel() throws Exception {
+        this.TIME = LocalDateTime.now();
+        this.time = TIME.format(TIMEFORMATTER);
+        this.date = TIME.format(DATEFORMATTER);
         formatTime();
         formatDate();
         this.jsonObj = APIKit.getJSONObjectByIS(XMLHandlerKit.xmlAPIToIS(APIURL));

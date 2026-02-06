@@ -12,6 +12,11 @@ target/
 .settings
 .springBeans
 .sts4-cache
+*.properties
+tokens/
+### Credentials ###
+src/main/resources/credentials.properties
+src/main/resources/credentials.json
 
 ### IntelliJ IDEA ###
 .idea
@@ -32,3 +37,4 @@ build/
 ### VS Code ###
 .vscode/
 .DS_Store
+
