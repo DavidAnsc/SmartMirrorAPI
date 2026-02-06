@@ -1,86 +1,120 @@
 {
-  "codingNewsModel": {
-    "headlineLinks": [
-      "https://notepad-plus-plus.org/news/hijacked-incident-info-update/",
-      "https://lapcatsoftware.com/articles/2026/2/1.html",
-      "https://journal.rafaelcosta.me/my-thousand-dollar-iphone-cant-do-math/",
-      "https://xikipedia.org",
-      "https://www.bbc.com/news/articles/c93v21q5xdvo",
-      "https://martinalderson.com/posts/two-kinds-of-ai-users-are-emerging/",
-      "https://apps.dtic.mil/sti/tr/pdf/ADA157917.pdf",
-      "https://www.theverge.com/tech/865689/microsoft-claude-code-anthropic-partnership-notepad",
-      "https://neutree.ai/blog/nano-vllm-part-1",
-      "https://blog.bawolf.com/p/founding-is-a-snowball"
+  "calendarEventsModel": {
+    "eventNames": [
+      "Civvies Day",
+      "Ash Wednesday",
+      "Liturgy of the Word (Period 1)",
+      "Qing Cheng Lee's birthday",
+      "Civvies Day",
+      "March Break",
+      "March Break",
+      "March Break",
+      "March Break",
+      "March Break"
     ],
-    "headlines": [
-      "Notepad++ hijacked by state-sponsored actors (notepad-plus-plus.org)",
-      "Apple's MacBook Pro DFU port documentation is wrong (lapcatsoftware.com)",
-      "My iPhone 16 Pro Max produces garbage output when running MLX LLMs (rafaelcosta.me)",
-      "Show HN: Wikipedia as a doomscrollable social media feed (xikipedia.org)",
-      "Treasures found on HS2 route (bbc.com)",
-      "Two kinds of AI users are emerging (martinalderson.com)",
-      "Actors: A Model of Concurrent Computation [pdf] (1985) (dtic.mil)",
-      "Claude Code is suddenly everywhere inside Microsoft (theverge.com)",
-      "Nano-vLLM: How a vLLM-style inference engine works (neutree.ai)",
-      "Founding is a snowball (bawolf.com)"
-    ],
-    "questionLinks": [
-      "https://news.ycombinator.com/item?id=46857488",
-      "https://news.ycombinator.com/item?id=46857487",
-      "https://news.ycombinator.com/item?id=46864047",
-      "https://news.ycombinator.com/item?id=46857444",
-      "https://news.ycombinator.com/item?id=46860544",
-      "https://news.ycombinator.com/item?id=46863378",
-      "https://news.ycombinator.com/item?id=46861542",
-      "https://news.ycombinator.com/item?id=46860945",
-      "https://news.ycombinator.com/item?id=46853873",
-      "https://news.ycombinator.com/item?id=46839375"
-    ],
-    "questions": [
-      "Ask HN: Who is hiring? (February 2026)",
-      "Ask HN: Who wants to be hired? (February 2026)",
-      "Ask HN: What weird or scrappy things did you do to get your first users?",
-      "Kernighan on Programming",
-      "GitHub Actions Have \"Major Outage\"",
-      "Ask HN: Who is firing? (February 2026)",
-      "Ask HN: How do you give AI agents access without over-permissioning?",
-      "GitHub Incidents with Actions and Codespaces",
-      "Ask HN: Has anybody moved their local community off of Facebook groups?",
-      "Google Cloud suspended my account for 2 years, only automated replies"
+    "eventTimes": [
+      "2026-02-11",
+      "2026-02-18",
+      "2026-02-18",
+      "2026-02-21",
+      "2026-03-11",
+      "2026-03-16",
+      "2026-03-17",
+      "2026-03-18",
+      "2026-03-19",
+      "2026-03-20"
     ]
   },
-  "mathQuestionsModel": {
-    "answers": [
-      "76379 is a  prime",
-      "76379 is NOT a perfect number",
-      "76379 is NOT a Mersenne prime",
-      "76379 is NOT a Fermat prime",
-      "76379 is NOT a Fibonacci prime",
-      "76379 is NOT a Partition prime",
-      "76379 is NOT a Pell prime"
+  "codingNewsModel": {
+    "headlineLinks": [
+      "https://www.anthropic.com/news/claude-opus-4-6",
+      "https://openai.com/index/introducing-gpt-5-3-codex/",
+      "https://blog.comma.ai/datacenter/",
+      "https://mitchellh.com/writing/my-ai-adoption-journey",
+      "https://www.anthropic.com/engineering/building-c-compiler",
+      "https://github.com/mdp/linkedin-extension-fingerprinting",
+      "https://rachelbythebay.com/w/2026/02/03/badnas/",
+      "https://www.jakequist.com/thoughts/openclaw-is-what-apple-intelligence-should-have-been",
+      "https://code.claude.com/docs/en/agent-teams",
+      "https://www.wsj.com/tech/ai/microsofts-pivotal-ai-product-is-running-into-big-problems-ce235b28"
+    ],
+    "headlines": [
+      "Claude Opus 4.6 (anthropic.com)",
+      "GPT-5.3-Codex (openai.com)",
+      "Don't rent the cloud, own instead (comma.ai)",
+      "My AI Adoption Journey (mitchellh.com)",
+      "We tasked Opus 4.6 using agent teams to build a C Compiler (anthropic.com)",
+      "LinkedIn checks for 2953 browser extensions (github.com/mdp)",
+      "When internal hostnames are leaked to the clown (rachelbythebay.com)",
+      "OpenClaw is what Apple intelligence should have been (jakequist.com)",
+      "Orchestrate teams of Claude Code sessions (claude.com)",
+      "Microsoft's Copilot chatbot is running into problems (wsj.com)"
+    ],
+    "questionLinks": [
+      "https://news.ycombinator.com/item?id=46916245",
+      "https://news.ycombinator.com/item?id=46907001",
+      "https://news.ycombinator.com/item?id=46909060",
+      "https://news.ycombinator.com/item?id=46911911",
+      "https://news.ycombinator.com/item?id=46857487",
+      "https://news.ycombinator.com/item?id=46911249",
+      "https://news.ycombinator.com/item?id=46857488",
+      "https://news.ycombinator.com/item?id=46890418",
+      "https://news.ycombinator.com/item?id=46895494",
+      "https://news.ycombinator.com/item?id=46907123"
     ],
     "questions": [
-      "Is 76379 a Prime Number?",
-      "Is 76379 a perfect number?",
-      "Is 76379 a Mersenne Prime?",
-      "Is 76379 a Fermat Prime?",
-      "Is 76379 a Fibonacci Prime?",
-      "Is 76379 a Partition Prime?",
-      "Is 76379 a Pell Prime?"
+      "AI Regex Scientist: A self-improving regex solver",
+      "Ask HN: Anyone Using a Mac Studio for Local AI/LLM?",
+      "Ask HN: 10 months since the Llama-4 release: what happened to Meta AI?",
+      "Ask HN: Why LLM providers sell access instead of consulting services?",
+      "Ask HN: Who wants to be hired? (February 2026)",
+      "Ask HN: What is the most complicated Algorithm you came up with yourself?",
+      "Ask HN: Who is hiring? (February 2026)",
+      "Tell HN: Another round of Zendesk email spam",
+      "Ask HN: Is Connecting via SSH Risky?",
+      "Ask HN: How does ChatGPT decide which websites to recommend?"
     ]
   },
   "timeModel": {
-    "date": "February 2nd 2026",
-    "daysLeft": "332",
-    "time": "7:36 PM",
-    "weekday": "Monday"
+    "date": "Feb 6th",
+    "daysLeft": "328",
+    "time": "3:38 PM",
+    "weekday": "Fri"
   },
   "weatherDataModel": {
-    "actTemp": -7.55,
-    "description": "light snow",
-    "feelsLike": -12.67,
-    "humidity": 88,
-    "minMaxTemp": [-21.07, -6.26],
+    "actTemp": -3.96,
+    "description": "overcast clouds",
+    "feelsLike": -8.35,
+    "humidity": 85,
+    "minMaxTemp": [-20.06, -3.85],
     "precipitation": null
+  },
+  "zenQuotesModel": {
+    "allAuthors": [
+      "Bob Marley",
+      "Helen Keller",
+      "Unknown",
+      "Christopher Columbus",
+      "Samuel Butler",
+      "Lao Tzu",
+      "Henry David Thoreau",
+      "Mark Manson",
+      "Nicolas Chamfort",
+      "Henry Ward Beecher"
+    ],
+    "allQuotes": [
+      "When the root is strong, the fruit is sweet.",
+      "Your success and happiness lie in you.",
+      "You may be one person in this world, but to one person you may mean the world.",
+      "It is easy to discover what another has discovered before.",
+      "Logic is like the sword - those who appeal to it shall perish by it.",
+      "Care about what other people think and you will always be their prisoner.",
+      "Disobedience is the true foundation of liberty. The obedient must be slaves.",
+      "Life is essentially an endless series of problems. The solution to one problem is merely the creation of another.",
+      "Contemplation often makes life miserable.  We should act more, think less, and stop watching ourselves live.",
+      "No man is more cheated than the selfish man."
+    ],
+    "author": "Bob Marley",
+    "quote": "When the root is strong, the fruit is sweet."
   }
 }
