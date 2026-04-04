@@ -6,21 +6,49 @@ import org.json.simple.JSONArray;
 import com.davidan.SmartMirrorAPI.kits.APIKit;
 import com.davidan.SmartMirrorAPI.kits.XMLHandlerKit;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.SequenceGenerator;
+import jakarta.persistence.Transient;
+
+@Entity
 public class WeatherDataModel {
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "weather_data_id_seq")
+    @SequenceGenerator(name = "weather_data_id_seq", sequenceName = "weather_data_id_seq", allocationSize = 1)
+    int id;
+
+    @Transient
     /**/private String APIURL = "https://api.openweathermap.org/data/3.0/onecall?lat=43.48246288302679&lon=-80.5262673561612&appid=3029ae615ff51030029ab9eb85569067";
+    @Transient
     /**/private JSONObject jsonObj;
+
+    @Column(name="min_max_temp")
     private Double[] minMaxTemp = new Double[2];
+    @Column(name="humidity")
     private Long humidity;
+    @Column(name="precipitation", nullable = true)
     private Long precipitation;
+    @Column(name="actual_temp")
     private Double actTemp;
+    @Column(name="feels_like")
     private Double feelsLike;
+    @Column(name="description")
     private String description; // weather description
+    
 
     private static Double kelvinToCelcius(Double kelvin) {
         return kelvin - 273.15;
     }
-    public WeatherDataModel() throws Exception {
-        this.jsonObj = APIKit.getJSONObjectByIS(XMLHandlerKit.xmlAPIToIS(APIURL));
+
+    public WeatherDataModel() {
+    }
+
+    public int getId() {
+        return id;
     }
     public Double[] getMinMaxTemp() {
         return minMaxTemp;
@@ -42,6 +70,8 @@ public class WeatherDataModel {
     }
 
     public void obtainData() throws Exception {
+        this.jsonObj = APIKit.getJSONObjectByIS(XMLHandlerKit.xmlAPIToIS(APIURL));
+
         JSONObject currentRoot = APIKit.getJSONSubitem(jsonObj, "current");
         JSONArray dailyRoot = APIKit.getJSONSubarray(jsonObj, "daily");
         try {

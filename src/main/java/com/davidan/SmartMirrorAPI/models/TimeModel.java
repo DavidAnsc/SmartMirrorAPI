@@ -8,16 +8,99 @@ import org.json.simple.JSONObject;
 import com.davidan.SmartMirrorAPI.kits.APIKit;
 import com.davidan.SmartMirrorAPI.kits.XMLHandlerKit;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.SequenceGenerator;
+import jakarta.persistence.Transient;
+
+@Entity
 public class TimeModel {
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "time_model_id_seq")
+    @SequenceGenerator(name = "time_model_id_seq", sequenceName = "time_model_id_seq", allocationSize = 1)
+    int id;
+    
+    @Transient
     /**/DateTimeFormatter TIMEFORMATTER = DateTimeFormatter.ofPattern("HH:mm");
+    @Transient
     /**/DateTimeFormatter DATEFORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+    @Transient
     /**/private LocalDateTime TIME;
+    @Transient
     /**/private String APIURL = "http://worldtimeapi.org/api/timezone/America/Toronto";
+    @Column(name="time")
     private String time;
+    @Column(name="date")
     private String date;
+    @Column(name="weekday")
     private String weekday;
+    @Column(name="daysLeft")
     private String daysLeft; // of the year
+    @Transient
     /**/private JSONObject jsonObj;
+
+    public TimeModel() {
+        this.TIME = LocalDateTime.now();
+        this.time = TIME.format(TIMEFORMATTER);
+        this.date = TIME.format(DATEFORMATTER);
+        formatTime();
+        formatDate();
+    }
+    
+    
+    public int getId() {
+        return id;
+    }
+    public String getTime() {
+        return time;
+    }
+    public String getDate() {
+        return date;
+    }
+    public String getWeekday() {
+        return weekday;
+    }
+    public String getDaysLeft() {
+        return daysLeft;
+    }
+
+    public void obtainData() throws Exception {
+        this.jsonObj = APIKit.getJSONObjectByIS(XMLHandlerKit.xmlAPIToIS(APIURL));
+        int dayOfTheYear = APIKit.<Long>getJSONToT(jsonObj, "day_of_year").intValue();
+        int dayOfTheWeek = APIKit.<Long>getJSONToT(jsonObj, "day_of_week").intValue();
+
+        this.daysLeft = String.valueOf(365 - dayOfTheYear);
+        switch (dayOfTheWeek) {
+            case 1:
+                this.weekday = "Mon";
+                break;
+            case 2:
+                this.weekday = "Tue";
+                break;
+            case 3:
+                this.weekday = "Wed";
+                break;
+            case 4:
+                this.weekday = "Thu";
+                break;
+            case 5:
+                this.weekday = "Fri";
+                break;
+            case 6:
+                this.weekday = "Sat";
+                break;
+            case 0:
+                this.weekday = "Sun";
+                break;
+        }
+
+        this.daysLeft = String.valueOf(365 - dayOfTheYear);
+
+    }
+
 
     private void formatTime() {
         String hour = this.time.substring(0, 2);
@@ -96,57 +179,5 @@ public class TimeModel {
         }
         this.date = modifiedMonth + " " + modifiedDay;
     }
-    public TimeModel() throws Exception {
-        this.TIME = LocalDateTime.now();
-        this.time = TIME.format(TIMEFORMATTER);
-        this.date = TIME.format(DATEFORMATTER);
-        formatTime();
-        formatDate();
-        this.jsonObj = APIKit.getJSONObjectByIS(XMLHandlerKit.xmlAPIToIS(APIURL));
-    }
-
-    public String getTime() {
-        return time;
-    }
-    public String getDate() {
-        return date;
-    }
-    public String getWeekday() {
-        return weekday;
-    }
-    public String getDaysLeft() {
-        return daysLeft;
-    }
-
-    public void obtainData() throws Exception {
-        int dayOfTheYear = APIKit.<Long>getJSONToT(jsonObj, "day_of_year").intValue();
-        int dayOfTheWeek = APIKit.<Long>getJSONToT(jsonObj, "day_of_week").intValue();
-
-        this.daysLeft = String.valueOf(365 - dayOfTheYear);
-        switch (dayOfTheWeek) {
-            case 1:
-                this.weekday = "Mon";
-                break;
-            case 2:
-                this.weekday = "Tue";
-                break;
-            case 3:
-                this.weekday = "Wed";
-                break;
-            case 4:
-                this.weekday = "Thu";
-                break;
-            case 5:
-                this.weekday = "Fri";
-                break;
-            case 6:
-                this.weekday = "Sat";
-                break;
-            case 0:
-                this.weekday = "Sun";
-                break;
-        }
-
-        this.daysLeft = String.valueOf(365 - dayOfTheYear);
-    }
+    
 }

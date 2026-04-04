@@ -2,11 +2,36 @@ package com.davidan.SmartMirrorAPI.models;
 
 import com.davidan.SmartMirrorAPI.kits.CalendarFetcher;
 
-public class CalendarEventsModel {
-    /**/private CalendarFetcher calendarFetcher = CalendarFetcher.shared;
-    private String[] eventNames = new String[10];
-    private String[] eventTimes = new String[10];
+import jakarta.annotation.Generated;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.SequenceGenerator;
+import jakarta.persistence.Transient;
 
+@Entity
+public class CalendarEventsModel {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "calendar_events_id_seq")
+    @SequenceGenerator(name = "calendar_events_id_seq", sequenceName = "calendar_events_id_seq", allocationSize = 1)
+    int id;
+
+    @Transient
+    /**/private CalendarFetcher calendarFetcher = CalendarFetcher.shared;
+    @Transient
+    private String[] eventNames = new String[10];
+    @Transient
+    private String[] eventTimes = new String[10];
+    
+    
+    public CalendarEventsModel() {
+    }
+
+    public int getId() {
+        return id;
+    }
     public String[] getEventNames() {
         return eventNames;
     }
